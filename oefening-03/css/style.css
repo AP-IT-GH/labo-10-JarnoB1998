@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+div {
+  height: 28vw;
+  width: 30vw;
+  background-color: red;
+  transition-property: border-radius background-color;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+div:is(:hover, :focus) {
+  border-radius: 50%;
+  background-color: blue;
+}
+

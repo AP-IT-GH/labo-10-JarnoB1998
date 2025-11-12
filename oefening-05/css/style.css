@@ -1,0 +1,97 @@
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .7fr 6fr 1.3fr;
+    background-color: rgb(252, 245, 235);
+}
+header{
+    background-color: lightblue;
+    grid-column: 1/3;
+}
+ul{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+    padding: 1rem;
+    justify-content: end;
+}
+a{
+    transition-duration: .3s;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+}
+a:is(:hover, :focus){
+    color: black;
+}
+main{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+section{
+    width: 30%;
+}
+input, label, textarea{
+    all: revert;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+input,textarea{
+    padding: .2rem .3rem;
+    margin-bottom: 1rem;
+    transition-property: border-radius background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+input:is(:hover, :focus), textarea:is(:focus, :hover){
+    background-color: transparent;
+    /* border-radius: 6px; */
+}
+button{
+    background-color: black;
+    color: white;
+    padding: 1rem 1.3rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition-property: border-radius color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+button:is(:hover, :focus){
+    background-color: lightblue;
+    border-radius: 0;
+}
+button:active{
+    color: black;
+}
+img{
+    width: 30vw;
+    animation-name: rotater;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+footer{
+    background-color: lightblue;
+    grid-column: 1/3;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes rotater {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

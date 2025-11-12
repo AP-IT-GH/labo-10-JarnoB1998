@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+div{
+    height: 30vh;
+    width: 40vw;
+    background-color: aquamarine;
+    animation-name: stretch;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes stretch {
+    0%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(1.8);
+    }
+}

@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    perspective: 500px;
+}
+
+p{
+    animation-name: shuffleIn;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes shuffleIn {
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-65vw);
+        opacity: 0;
+    }
+}
